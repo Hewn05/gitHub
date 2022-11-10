@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>promise</title>
+  </head>
+  <body>
+    <script>
+      function goToSchool() {
+        console.log('학교에 갑니다.')
+      }
+      function arriveAtSchool_w() {
+        setTimeout(function () {
+          console.log('학교도착')
+        }, 1000)
+      }
+      function study() {
+        console.log('공부합니다')
+      }
+      function arriveAtSchool_r() {
+        return new Promise(function (resolve) {
+          setTimeout(function () {
+            console.log('학교도착')
+            resolve()
+          }, 1000)
+        })
+      }
+      function arriveAtSchool_ra() {
+        return new Promise(function (resolve, reject) {
+          setTimeout(function () {
+            var status = Math.floor(Math.random() * 2)
+            if (status == 1) {
+              resolve('학교에 도착')
+            } else {
+              reject('중간에 사고')
+            }
+          }, 1000)
+        })
+      }
+      function cure() {
+        console.log('병원이동')
+      }
+
+      //   goToSchool()
+      //   arriveAtSchool_ra()
+      //     .then(function (res) {
+      //       console.log(res)
+      //       study()
+      //     })
+      //     .catch(function (err) {
+      //       console.log(err)
+      //       cure()
+      //     })
+
+      function devide(num1, num2) {
+        return new Promise((resolve, reject) => {
+          if (num2 === 0) {
+            reject(new Error('Unable to devide by 0'))
+          } else {
+            resolve(num1 / num2)
+          }
+        })
+      }
+      devide(8, 2)
+        .then((result) => {
+          console.log('정상', result)
+          return result
+        })
+        .then((result) => {
+          result *= 3
+          console.log('두번째', result)
+        })
+        .catch((error) => console.log('에러', error))
+    </script>
+  </body>
+</html>

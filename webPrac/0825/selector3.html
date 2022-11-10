@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        /* 속성명이 title */
+        /* [title]{background-color: black; color: yellow;} */
+        /* 속성명 속성값 같은경우 */
+        /* [title="tt h2"]{background-color: gray; color:white;} */
+        /* 속성값이 이름을 포함 */
+        /* [title~="tt"]{background-color: green; color:red;} */
+        /* 속성값이 이름-@@@@  */
+        /* [title|="tt"]{background-color: rgb(7,3,253); color: white;} */ 
+        /* 속성값이 해당값으로 시작 */
+        /* [title^="tt"]{background-color: brown; color: azure;} */
+        /* 속성값이 해당값으로 끝 */
+        /* [title$="tt"]{background-color: blueviolet; color: black;} */
+        /* 속성값이 해당값 포함 */
+        [title*="tt"]{background-color: orange;color: skyblue;}
+        house{color:red}
+    </style>
+</head>
+<body>
+    <h1>속성 선택자를 이용한 선택</h1>
+    <h2 title="tt h2">title 속성이 tt h2</h2>
+    <h3>타이틀 없음</h3>
+    <p title="tt">tt</p>
+    <p title="tttt">tttt</p>
+    <p title="tt p">tt p</p>
+    <p title="tt-p">tt-p</p>
+    <p title="p tt">p tt</p>
+    <p title="p-tt">p-tt</p>
+    <p title="my-tt-p">my-tt-p</p>
+    <p title="ff p">ff p</p>
+    <house dog="poo">
+        123
+    </house>
+
+</body>
+</html>

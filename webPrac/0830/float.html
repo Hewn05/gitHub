@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS float</title>
+</head>
+<style>
+    img{float:right; margin-right: 20px;}
+
+    .left{
+        background-color: orange; width: 150px; height: 50px; float: left;
+    }
+    .right{
+        background-color: orange; width: 150px; height: 50px; float:right;
+    }
+    #para{clear: both;}
+    div.page{border: 3px solid pink; overflow: auto;}
+    h2{text-align: center;}
+    header{border:3px solid sandybrown}
+    nav{
+        border:3px solid deeppink;
+        width: 150px; min-height: 150px; float: left; height: 30%;
+    }
+    section{
+        border:3px solid skyblue;
+        margin-left: 160px; height: 30%;
+    }
+    footer{border: 3px solid lightgreen}
+</style>
+<body>
+    <h3>float속성을 이용한 위치 설정</h3>
+    <p>
+        <img src="cat.jpg" alt="깜냥" width="250" height="180">
+        난 파도가 머물던 모래 위에 적힌 글씨처럼 그대가 멀리 사라져 버릴 것 같아
+    </p>
+    <h3>clear속성을 이용한 위치 설정</h3>
+    <div>
+        <div class="left">왼쪽으로 위치한 요소</div>
+        <div class="right">오른쪽으로 위치한 요소</div>
+    </div>
+    <p>하단의 문장 출력</p>
+    <br><br>
+    <h1>float속성을 통한 레이아웃</h1>
+    <div class="page">
+        <header>
+            <h2>header 영역</h2>
+        </header>
+        <nav>
+            <h2>nav 영역</h2>
+            <a href="#">다양한 링크</a>
+            <a href="#">메뉴 1</a>
+            <a href="#">menu 2</a>
+        </nav>
+        <section>
+            <h2>section area</h2>
+            <p>
+                아이유 밤편지<br>
+                여기 내 마음속에 모든 말을 다 꺼내어 줄 순 없지만 사랑한다는 말이에요
+            </p>
+        </section>
+        <footer>
+            <h2>footer area</h2>
+        </footer>
+        </div>
+</body>
+</html>

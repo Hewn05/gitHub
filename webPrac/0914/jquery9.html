@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery</title>
+    <script src="../0913/js/jquery-3.6.1.min.js"></script>
+    <style>
+      div {
+        border: 1px solid black;
+        width: 50px;
+        height: 50px;
+        float: left;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li>list item1</li>
+      <li>list item2</li>
+      <li>
+        list item3
+        <span>tags</span>
+      </li>
+    </ul>
+    <div>A</div>
+    <div class="mid">B</div>
+    <div class="mid not">C</div>
+    <div class="mid not">D</div>
+    <div class="mid">E</div>
+    <div>F</div>
+    <script>
+      $('div').not('.not').css('color', 'red')
+      //   $('li:nth-child(1)').css('color', 'red')
+      $('li').first().css('color', 'red')
+      //   $('li').filter(':nth-child(2)').css('color', 'blue')
+      $('li').eq(1).css('color', 'blue')
+      $('li')
+        .filter(function (index) {
+          return $('span', this).length === 1
+        })
+        .css('color', 'yellow')
+      $('div')
+        .css('background', 'skyblue')
+        .filter('.mid')
+        .css('border', '3px dotted blue')
+      $('ul').has('li').addClass('yes')
+      $('ul').click(function (event) {
+        let target = $(event.target)
+        if (target.is('li')) {
+          target.css('background-color', 'red')
+        }
+      })
+    </script>
+    <form>
+      <fieldset>
+        <label>이름:</label>
+        <input type="text" name="name" value="" />
+        <label>암호:</label>
+        <input type="password" name="pw" value="" />
+        <label>이메일:</label>
+        <input type="email" name="email" value="" />
+      </fieldset>
+    </form>
+    <button type="button" id="print">출력</button>
+    <b>값 출력:</b>
+    <p></p>
+    <p id="remove">지울거임.</p>
+    <script>
+      let temp = $('input').map(function (index, ele) {
+        console.log(index, ele)
+        return $(this).val()
+      })
+      console.log(temp, temp.get())
+      $('print').click(function () {
+        $('p').empty()
+        $('#remove').remove()
+        $('p').append(
+          $('input')
+            .map(function (index, ele) {
+              return $(this).val()
+            })
+            .get()
+            .join()
+        )
+      })
+    </script>
+  </body>
+</html>

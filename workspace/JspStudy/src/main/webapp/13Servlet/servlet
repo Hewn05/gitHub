@@ -1,0 +1,18 @@
+Servlet 작성 규칙
+임포트(javax.servlet)
+public
+httpServlet을 상속
+doGet doPost 반드시 오버라이딩
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import java.io.IOException;
+
+public class 서블릿클래스명 extends HttpServlet{
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		super.doGet(req, resp);
+	}
+}

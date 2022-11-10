@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <style>
+      div {
+        border: 1px solid black;
+      }
+      table div {
+        padding: 10px;
+      }
+      table button {
+        margin: 3px;
+        padding: 10px;
+        display: block;
+      }
+      .bgBlue {
+        background: blue;
+      }
+      .bgRed {
+        background: red;
+      }
+    </style>
+    <script>
+      $(function () {
+        $('#btn1').click(function () {
+          $('div').removeClass('bgBlue')
+          $('div:contains(common)').addClass('bgBlue')
+        })
+        $('#btn2').click(function () {
+          $('div').removeClass('bgBlue')
+          $('div:empty').addClass('bgBlue')
+        })
+        $('#btn3').click(function () {
+          $('div').removeClass('bgBlue')
+          $('div:has(p)').addClass('bgBlue')
+        })
+        $('#btn4').click(function () {
+          $('div').removeClass('bgBlue')
+          $('div').parent().addClass('bgRed')
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td>
+          <div>1 안녕하세요</div>
+          <div><p></p></div>
+          <div>3 뭐하세요?</div>
+          <div>4 Iphone 23 common</div>
+          <div>5 숫자 세기 common</div>
+          <div></div>
+          <div>7 잘 가세요. common</div>
+        </td>
+        <td>
+          <button type="button" id="btn1">:contains()</button>
+          <button type="button" id="btn2">:empty</button>
+          <button type="button" id="btn3">:has(selector)</button>
+          <button type="button" id="btn4">:parent</button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

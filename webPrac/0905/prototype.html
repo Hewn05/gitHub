@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        function Dog(name, color, age, gender){
+            this.name = name;
+            this.color = color;
+            this.age = age;
+            this.gender = gender;
+        }
+        console.log(Dog);
+        Dog.prototype.family = "시츄";
+        Dog.prototype.breed = function(){
+            return this.name + " " + this.age + " " + this.family;
+        }
+        console.log(Dog,Dog.prototype);
+
+        let pet = new Dog("댕댕이","검은색",2,"수컷");
+        console.log(pet);
+        console.log(pet.breed);
+
+        let pet2 = new Dog('흰둥이",하얀색',4,"암컷");
+        console.log(pet2);
+        console,log(pet.petreed);
+        
+        let obj = {a:1, b:2, c:3};
+        let arr = [1,2,3];
+        for(let item in obj){
+            console.log(item);
+        }
+        for(let item in arr){
+            console.log(item);
+        }
+        for(let item of arr){
+            console.arr;
+        }
+
+    </script>
+</body>
+</html>

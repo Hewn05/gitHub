@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery</title>
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script>
+      $(function () {
+        $('#append').append($('#prac').text())
+        $('#prepend').prepend($('#prac').html())
+        $('#append').text('우리집<b>너희집</b>')
+        $('#prepend').html('우리집<b>너희집</b>')
+        // $('button').click(() => {
+        //   $('span').text($('#input').val())
+        // })
+        $('#btn1').click(() => {
+          $('ol').prepend('<li>prepend item</li>')
+        })
+        $('#btn2').click(() => {
+          $('ol').append('<li>append item</li>')
+        })
+        $('#btn3').click(() => {
+          $('ol').before('<strong>Before</strong>')
+        })
+        $('#btn4').click(() => {
+          $('ol').after('<i>After</i>')
+        })
+        $('#btn5').click(() => {
+          $('#div').empty()
+        })
+        $('#btn6').click(() => {
+          $('#div').remove()
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <p id="prac">
+      이것은
+      <mark>맛있는</mark>
+      <b>왕</b>
+      뚜껑
+    </p>
+    <p id="append">여기는 수업중</p>
+    <br />
+    <p id="prepend">여기는 수업중</p>
+    <br />
+    <p>
+      Name:
+      <input type="text" id="input" value="수업중" />
+    </p>
+    <br />
+    <button>값</button>
+    <span></span>
+
+    <ol>
+      <li>List item1</li>
+      <li>List item2</li>
+      <li>List item3</li>
+    </ol>
+    <button id="btn1">prepend</button>
+    <button id="btn2">append</button>
+    <button id="btn3">before</button>
+    <button id="btn4">after</button>
+    <br />
+    <div id="div" style="height: 100px; width: 300px; border: 1px solid black;">
+      div내부의 문장들
+      <p>내부 문장1</p>
+      <p>내부 문장2</p>
+    </div>
+    <button id="btn5">empty</button>
+    <button id="btn6">remove</button>
+  </body>
+</html>

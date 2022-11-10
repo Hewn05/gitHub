@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS link</title>
+    <style>
+        a{
+            background-color: aliceblue;
+            color: darkblue;
+            font-size: 1.3em;
+            font-weight: 800;
+            text-decoration: none;
+        }
+        a:link{color: green;}
+        a:visited{color: red}
+        a:hover{color: coral}
+        a:active{color: blue}
+
+        #test:link, #test:visited{background-color: orange; color: maroon; font-size: 0.9em;}
+        #test:active, #test:hover{background-color: black; color: white; font-size: 1.1em;}
+
+        a[name="temp"]:link, a[name="temp"]:visited{background-color: gray; color:aquamarine; font-size: 0.5em;}
+        a[name="temp"]:active, a[name="temp"]:hover{background-color: violet; color:beige; font-size: 1.5em;}
+
+        .real:link,.real:visited{background-color: crimson; color:greenyellow; font-size: 1.2em;}
+        .real:active, .real:hover{background-color: darkkhaki; color:skyblue; font-size: 0.8em;}   
+        
+        p>a:link, p>a:visited{color: black}
+        p a:active, p a:hover{color: gray}
+
+        a:link>p, a:visited>p{background: black;}
+        a:active p, a:hover p{background: gray;}
+    </style>
+</head>
+<body>
+    <h3>링크의 스타일 설정</h3>
+    <a href="#" target="_blank">가자</a>
+    <p><a href="#" target="_blank" id="test">집에 가자</a></p>
+    <p><a href="#" target="_blank" name="temp">어딘가로 가자</a></p>
+    <p><a href="#" target="_blank" class="real">진짜 가자</a></p>
+    <p><a href="#" target="_blank">가자가자가보자</a></p>
+    <a href="#" target="_blank"><p>그렇구나</p></a>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavigationBar</title>
+    <style>
+        /* li a{background-color:antiquewhite ; text-decoration: none; color:black;
+             display: block; padding:8px}
+        ul{background-color:antiquewhite; list-style-type: none; margin: 0; padding: 0; overflow: hidden;}
+        li{float: left; font-weight: bold; border:1px solid white }
+        .login{float: right;}
+        .current{background-color: orange; color: white;}
+        a:hover:not(.login){background-color: cyan; color: white;} */
+
+        li a{background-color: antiquewhite; text-decoration: none; color:black;
+             display: block; text-align: center;}
+        ul{list-style-type: none; border:1px solid black; width: 150px; margin: 0; padding: 0;}
+        li{font-weight: bold; border:1px solid white;}
+        .current{background-color: orange; color: white;}
+        a:hover:not(.login){background-color: cyan; color: white;}
+        ul>ul{position: relative; right: 1px; top: 1px;} 
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>네비게이션 바</h1>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#" class="current">CSS</a></li>
+            <ul class="login">
+                <li><a href="#" class="login">로그인</a></li>
+                <li><a href="#" class="login">회원가입</a></li>
+            </ul>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS overflow</title>
+    <style>
+        div{border: 1px solid green; width: 200px; height: 200px; display: inline-block;}
+        div.container1{
+            overflow-x:scroll ; overflow-y: hidden; white-space: nowrap;
+        }
+        div.container2{
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <div class="container1">
+        <p>Tell me what you want
+            Tell me what you need
+            A to Z 다 말해봐 but 시작은 이렇게 해
+            Talk that talk 딱 한 마디
+            Talk that talk L-O-V-E
+            들려줘 ooh
+            Now-now-now-now-now yeah</p>
+    </div>
+    <div class="container2">
+        <p>Tell me what you want
+            Tell me what you need
+            A to Z 다 말해봐 but 시작은 이렇게 해
+            Talk that talk 딱 한 마디
+            Talk that talk L-O-V-E
+            들려줘 ooh
+            Now-now-now-now-now yeah</p>
+    </div>
+</body>
+</html>

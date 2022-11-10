@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고차함수</title>
+</head>
+<body>
+    <script>
+        const fruits = ['orange','apple','banana','grape'];
+        fruits.sort();
+        console.log(fruits);
+        fruits.reverse();
+        console.log(fruits);
+        
+        const points = [50, 40, 30, 10, 100, 70, 10, 1, 4, 5];
+        points.sort();
+        console.log(points);
+
+        points.sort(function(a,b){return a-b;});
+        console.log(points);
+        points.sort(function(a,b){return b-a;});
+        console.log(points);
+        
+        const numbers = [1,2,3,4];
+        let pows= [];
+        for(let i = 0;i < numbers.length;i++){
+            pows.push(numbers[i]**2);
+        }
+        console.log(pows);
+        pows=[];
+        numbers.forEach(function(item,index,self){
+            console.log('numbers['+index+']='+item);
+            pows.push(item**2);
+        });
+        console.log(pows);
+
+        let roots = pows.map(function(item){
+            return Math.sqrt(item);
+        });
+        console.log(roots);
+
+        let filterResult = [1,2,3,4,5,6,7].filter(function(item){
+            return item%2 != 0;
+        });
+        console.log(filterResult);
+
+        let sum = [1,2,3,4,5].reduce(function(preval, curval){
+            console.log(preval,curval);
+            return preval+curval;
+        });
+        console.log(sum);
+
+        let some = [12,5,8,1,4].some(function(item){
+            return item>10;
+        });
+        let every = [21,16,88,11,55].every(function(item){
+            return item>10;
+        });
+        console.log(some, every);
+
+        let find = ['나','너','우리'].find(function(item){
+            return item === "나";
+        });
+        console.log(find);
+
+        let users=[
+            {name:'lee',gender:'male'},
+            {name:'koo',gender:'male'},
+            {name:'choi',gender:'female'}
+        ];
+        function check(key, val){
+            return function(item){
+                return item[key]===val;
+            }
+        }
+        let index = users.findIndex(check('name','koo'));
+        console.log(index);
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Attribute</title>
+</head>
+<body>
+    <input type="text">
+    <!-- <br>
+    <input class="password" type="password" value="123">
+    <button class="show">보여주기</button> -->
+    <script>
+        const input = document.querySelector('input[type=text]');
+        console.log(input);
+        if(!input.hasAttribute('placeholder')){
+            input.setAttribute('placeholder','hello!');
+        }
+        console.log(input.getAttribute('placeholder'));
+        
+    </script>
+</body>
+</html>

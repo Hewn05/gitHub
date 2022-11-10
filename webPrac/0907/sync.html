@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>비동기 처리</title>
+  </head>
+  <body>
+    <script>
+      function buy(item, price, quantity, callback) {
+        console.log(`${item}상품을 ${quantity}개 선택하여 계산대로 이동`)
+        setTimeout(function () {
+          console.log(`계산 진행중`)
+          var total = price * quantity
+          callback(total)
+        }, 1000)
+      }
+      var total = buy('사과', 1000, 5, pay)
+      function pay(total) {
+        console.log(total + '원 지불')
+      }
+      pay(total)
+    </script>
+  </body>
+</html>

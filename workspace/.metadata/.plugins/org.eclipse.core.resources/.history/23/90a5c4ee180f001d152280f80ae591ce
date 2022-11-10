@@ -1,0 +1,23 @@
+package string;
+
+public class StringPrac {
+
+	public static void main(String[] args) {
+		
+		String str1 = new String("abc");
+		String str2 = new String("abc");
+		
+		System.out.println(str1==str2);
+		
+		String str3 = "bcd";
+		String str4 = "bcd";
+		
+		System.out.println(str3==str4);
+		
+		str3 = "cde";
+		System.out.println(str4.toString());
+				
+		
+	}
+	
+}

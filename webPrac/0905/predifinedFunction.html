@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전역함수</title>
+</head>
+<body>
+    <script>
+        let x = 10, y = 20;
+        let a = eval("x+y");
+        let b = eval("y*4");
+        console.log(a,b);
+
+        console.log("=======isFinite======");
+        console.log(isFinite(123));
+        console.log(isFinite(123e100));
+        console.log(isFinite(0));
+        console.log(isFinite(true));
+        console.log(isFinite(false));
+        console.log(isFinite(null));
+        console.log(isFinite('123'));
+        console.log(isFinite(""));
+        console.log(isFinite("문자열"));
+        console.log(isFinite(undefined));
+        console.log(isFinite(NaN));
+
+        console.log("=======isNaN=======");
+        console.log(isNaN(123));
+        console.log(isNaN(123e100));
+        console.log(isNaN(0));
+        console.log(isNaN(true));
+        console.log(isNaN(false));
+        console.log(isNaN(null));
+        console.log(isNaN('123'));
+        console.log(isNaN(""));
+        console.log(isNaN("문자열"));
+        console.log(isNaN(undefined));
+        console.log(isNaN(NaN));
+
+        console.log("=====parseInt=====");
+        console.log(parseInt("123"));
+        console.log(parseInt("123.000"));
+        console.log(parseInt("123.456"));
+        console.log(parseInt("12 34 56"));
+        console.log(parseInt("  123   "));
+        console.log(parseInt("123 다이아"));
+        console.log(parseInt("다이아 123"));
+        console.log(parseInt("10",10));
+        console.log(parseInt("10",8));
+        console.log(parseInt("aa",16));
+        
+        console.log("=====parseFloat=====");
+        console.log(parseFloat("123"));
+        console.log(parseFloat("123.000"));
+        console.log(parseFloat("123.456"));
+        console.log(parseFloat("12 34 56"));
+        console.log(parseFloat("  123   "));
+        console.log(parseFloat("123 다이아"));
+        console.log(parseFloat("다이아 123"));
+        console.log(parseFloat("123.45612445123").toFixed(3));
+
+        let uri = "http://www.google.com/search?name=twice&location=서울";
+        let enc1 = encodeURI(uri);
+        let enc2 = encodeURIComponent(uri);
+        console.log(uri);
+        console.log(enc1);
+        console.log(enc2);
+        let dec1 = decodeURI(enc1);
+        let dec2 = decodeURIComponent(enc2);
+        console.log(dec1);
+        console.log(dec2);
+        let str = "wonderful world !@#";
+        let esc = escape(str);
+        let une = unescape(esc);
+        console.log(str);
+        console.log(esc);
+        console.log(une);       
+
+
+        console.log("======Number======");
+        console.log(Number("123"));
+        console.log(Number("123.000"));
+        console.log(Number("123.456"));
+        console.log(Number("12 34 56"));
+        console.log(Number("  123   "));
+        console.log(Number("123 다이아"));
+        console.log(Number("다이아 123"));
+        console.log(true);
+        console.log(false);
+        console.log(new Date());
+        console.log(null);
+        console.log(typeof(Number('123')));
+        console.log(Number('123') instanceof Object);
+        console.log(Number('123') instanceof Number);
+
+        console.log("=====String=====");
+        console.log(String(123));
+        console.log(String(13.154));
+        console.log(String('123'));
+        console.log(String(new Date()));
+        console.log(String(null));
+        console.log(String(true));
+        console.log(String(Boolean(0)));
+        console.log(String(Boolean(1)));
+        console.log(String(typeof(String(123))));
+        
+    </script>
+</body>
+</html>

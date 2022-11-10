@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown menu</title>
+    <style>
+        .dropdown-btn{ background-color: antiquewhite; padding:10px; 
+        font: 15px; border:none;}
+        .dropdown-btn:hover{ background-color: orange; }
+        .dropdown-content{
+            width: 80px;
+            border:1px solid antiquewhite;
+            display:none;
+            box-shadow: 0 5px 8px 0;
+        }
+        .dropdown-content:hover{ display:block }
+        .dropdown-btn:hover~.dropdown-content{ display:block }
+                
+        a{background-color: antiquewhite; color: black; text-decoration: none;
+            text-align: center; display: block; border:2px solid antiquewhite}
+        a:hover{ background-color: orange; }
+    </style>
+</head>
+<body>
+    <h1>드롭 다운 메뉴</h1>
+    <div class="dropdown">
+        <button class="dropdown-btn">Dropdown</button>
+        <div class="dropdown-content">
+            <a href="#">HTML</a>
+            <a href="#">CSS</a>
+            <a href="#">JAVA</a>
+        </div>
+    </div>
+</body>
+</html>

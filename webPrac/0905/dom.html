@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM구조</title>
+    <style>
+        .color2{color: blue}
+        .color{color: brown}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>도시</h1>
+        <ul>
+            <li id="one" class="color">서울</li>
+            <li id="two" class="color">대구</li>
+            <li id="three" class="color">부산</li>
+            <li id="four">대전</li>
+        </ul>
+    </div>
+    <script>
+        const ele = document.getElementById('one');
+        console.log(ele);
+        console.log(ele.__proto__);
+        console.log(ele.__proto__.__proto__);
+        console.log(ele.__proto__.__proto__.__proto__);
+        const ele2 = document.querySelector('li.color');
+        console.log(ele2);
+        ele2.className = 'color2';
+        const ele3 = document.getElementsByClassName('color');
+        console.log(ele3);
+        console.log([...ele3]);
+        let elec = Array.from(ele3);
+        console.log(elec,elec.length);
+        for(let i = 0;i < elec.length;i++){
+            elec[i].className='color2';
+        }
+    </script>
+</body>
+</html>

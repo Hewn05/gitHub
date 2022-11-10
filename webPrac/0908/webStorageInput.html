@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Area</title>
+  </head>
+  <body>
+    <textarea
+      id="area"
+      style="width: 200px; height: 60px;"
+      placeholder="작성 내용 자동 기록"
+    ></textarea>
+    <br />
+    <button id="cls">기록 삭제</button>
+    <button id="show">보여주기</button>
+    <script>
+      const area = document.getElementById('area')
+      area.value = localStorage.getItem('area')
+      area.oninput = () => {
+        localStorage.setItem('area', area.value)
+      }
+      const cls = document.getElementById('cls')
+      cls.onclick = () => {
+        localStorage.removeItem('area')
+        area.value = ''
+      }
+      const show = document.getElementById('show')
+      show.onclick = () => {
+        window.alert(area.value)
+      }
+    </script>
+  </body>
+</html>

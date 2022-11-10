@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symbol</title>
+  </head>
+  <body>
+    <script>
+      const s1 = Symbol()
+      const s2 = Symbol()
+      console.log(s1, s2)
+      console.log(s1 === s2)
+      const as1 = Symbol('a')
+      const as2 = Symbol('a')
+      console.log(as1, as2)
+      console.log(as1 === as2)
+      const s3 = s1
+      const fs1 = Symbol.for('uni')
+      const fs2 = Symbol.for('uni')
+      console.log(s3 === s1)
+      console.log(fs1 === fs2, fs1, fs2)
+
+      const obj = new Object()
+      obj.prop = 'myProp'
+      obj[123] = 123
+      obj['prop' + 123] = false
+      console.log(obj)
+
+      const obj2 = {}
+      const mySym = Symbol('mine')
+      obj2[mySym] = 123
+      obj2.propKey = 'propValue'
+      console.log(obj2)
+      console.log(obj2[mySym])
+      console.log(obj2.mySym)
+      console.log(mySym in obj2)
+      console.log(Object.keys(obj2))
+      console.log(Object.getOwnPropertySymbols(obj2))
+      console.log(Reflect.ownKeys(obj2))
+      console.log('===================================')
+      const obj3 = new Object()
+      anotherLibFunc(obj3)
+      console.log(obj3)
+      libFunc(obj3)
+      console.log(obj3)
+      function libFunc(obj) {
+        obj.id = 0
+      }
+      function anotherLibFunc(obj) {
+        obj.id = 1002
+      }
+      const libKey = Symbol('libKey')
+      function libFunc2(obj) {
+        obj[libKey] = 0
+      }
+      anotherLibFunc(obj3)
+      console.log(obj3)
+      libFunc2(obj3)
+      console.log(obj3)
+    </script>
+  </body>
+</html>

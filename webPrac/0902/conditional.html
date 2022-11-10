@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조건문</title>
+</head>
+<body>
+    <h1>if문</h1>
+    <script>
+        let num1 =2// prompt("첫번째 숫자를 입력");
+        let num2 =3// prompt("두번째 숫자를 입력");
+        document.write(num1+","+num2+"<br>");
+
+        if(num1 == num2){
+            document.write(num1+"은"+num2+"와 같습니다.");
+        }else if(num1 > num2){
+            document.write(num1+"은"+num2+"보다 큽니다.");
+        }else{
+            document.write(num1+"은"+num2+"보다 작습니다.")
+        }
+    </script>
+
+    <h1>switch문</h1>
+    <script>
+        let x = 10;
+        switch(typeof x){
+            case "number":
+                document.write("x의 타입은 숫자"+x);
+                break;
+
+            case "string":
+                document.write("x의 타입은 문자열"+x);
+                break;
+
+            case "object":
+                document.write("x의 타입은 객체"+x);
+                break;
+
+            default:
+                document.write("x의 타입은 뭐지"+x);
+                break;
+        }
+
+        document.write("<p>오늘은 ")
+        let day = new Date().getDay();
+        switch(day){
+            case 0,6:
+                document.write("즐거운 주말");
+                break;
+
+            case 5:
+                document.write("불금");
+                break;
+            
+            default:
+                document.write("주말이 아닙니다.");
+                break;            
+        }
+        document.write("</p>");
+    </script>
+
+</body>
+</html>

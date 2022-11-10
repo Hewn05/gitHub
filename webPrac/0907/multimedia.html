@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>멀티</title>
+  </head>
+  <body>
+    <h1>video</h1>
+    <video
+      controls
+      loop
+      style="width: 500px; height: 360px;"
+      poster="media/shell.jpg"
+    >
+      <source src="media/cat1.mp4" type="video/mp4" />
+      <source src="media/cat2.mp4" type="video/mp4" />
+      <track src="#" kind="subtitles" srclang="ko" label="한국어" />
+      <track src="#" kind="subtitles" srclang="ko" label="English" />
+      이 브라우저는 video 요소를 지원하지 않습니다.
+    </video>
+    <audio autoplay loop controls>
+      <source src="media/music1.mp3" type="audio/mp3" />
+    </audio>
+    <object data="media/NAVER.pdf">미지원</object>
+    <object data="media/shell.jpg" width="200px" height="100px"></object>
+    <br />
+    <object
+      data="templateLiteral.html"
+      style="width: 1000px; height: 300px;"
+    ></object>
+    <embed data="media/NAVER.pdf" />
+    미지원
+    <embed data="media/shell.jpg" width="200px" height="100px" />
+    <embed data="templateLiteral.html" style="width: 1000px; height: 300px;" />
+  </body>
+</html>

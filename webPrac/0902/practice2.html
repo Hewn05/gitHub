@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <h4>별</h4>
+    <script>
+        let len = 15;
+        let i = 0;
+        let j = 0;
+        let k = 0;
+        let max = (len*4)-3;
+        let mid = (len*2)-1;
+        // 총 칸수 4n-3   총 줄수 3n-2
+        // head n줄
+        for(i = 0;i < len;i++){
+            for(j = 1;j <= max;j++){
+                if(i == len-1){
+                    for(k = 0; k < len;k++)
+                        document.write('*');
+                    for(k = 0; k < (max-(len*2));k++)
+                        document.write('-');
+                    for(k = 0; k < len;k++)
+                        document.write('*');
+                    break;
+                }
+                if(j == mid-i || j == mid+i)
+                    document.write('*');
+                else
+                    document.write("-");
+            }
+            document.write("<br>");
+        }
+        // body  n-2 줄
+        for(i = 1 ; i <= len-2;i++){
+            for(j = 1;j <= max;j++){
+                if(j == i+1 || j == max-i)
+                    document.write('*');
+                else
+                    document.write('-');
+            }
+            document.write("<br>")
+        }        
+        // foot  n줄
+        k = len+1;
+        for(i = 1;i <= len;i++){
+            k -= 1;
+            for(j = 1;j <= max;j++){
+                if(j <= mid && (j == k || (j == k*2)))
+                    document.write('*');
+                else if(j >= mid && (j == (max-k+1) || j == (max-(k*2)+1)))
+                    document.write('*');
+                else
+                    document.write('-');
+            }
+            document.write("<br>")
+        }
+
+    </script>
+</body>
+</html>

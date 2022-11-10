@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Form</title>
+    <style>
+      input {
+        width: 100%;
+        padding: 10px 20px;
+        margin: 5px 0;
+        box-sizing: border-box;
+        border: none;
+        color: darkblue;
+      }
+      input:focus {
+        outline: none;
+      }
+      input[type='text']:focus {
+        border: 2px solid red;
+        border-radius: 5px;
+      }
+      input[type='password'] {
+        border-bottom: 2px solid orange;
+      }
+      input[type='password']:focus {
+        border-bottom-color: green;
+      }
+      legend {
+        background-color: aqua;
+        font-weight: bold;
+        text-decoration: underline;
+        border-radius: 12px;
+        border: 2px solid blue;
+      }
+      textarea {
+        width: 100%;
+        height: 200px;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 2px double skyblue;
+        border-radius: 5px;
+        font-size: 15px;
+        resize: both;
+      }
+      select {
+        background-color: aqua;
+        font-weight: bold;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>input 요소</h3>
+    <form action="">
+      <fieldset>
+        <legend>스타일</legend>
+        사용자 :
+        <input type="text" />
+        <br />
+        암호 :
+        <input type="password" />
+        <br />
+      </fieldset>
+    </form>
+    <form>
+      <fieldset>
+        <legend>textarea에 스타일 적용</legend>
+        <textarea name="area" id="area" cols="20" rows="2"></textarea>
+      </fieldset>
+    </form>
+    <form>
+      <fieldset>
+        <legend>select 요소에 스타일 적용</legend>
+        <select name="fruit">
+          <option value="apple">사과</option>
+          <option value="orange">오렌지</option>
+          <option value="strawberry">딸기</option>
+          <option value="peach">복숭아</option>
+        </select>
+      </fieldset>
+    </form>
+  </body>
+</html>

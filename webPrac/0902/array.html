@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+        let arr1 = [1,"JavaScript",true];
+        let arr2 = Array(2,"JavaScript",true);
+        let arr3 = new Array(3, "JavaScript",true);
+
+        console.log(arr1);
+        console.log(arr2);
+        console.log(arr3);
+        console.log(arr1.length);
+        let arr4=[,,,];
+        console.log(arr4);
+        arr4[10] = "origin" ;
+        console.log(arr4);
+        const arrayOf = Array.of(1,"JavaScipt", false);
+        const arrayFrom = Array.from(arrayOf)
+        console.log(arrayOf);
+        console.log(arrayFrom);
+
+        let arr5=[1,true,"JavaScript"];
+        arr5.push("java");
+        arr5[arr5.length] = 50;
+        console.log(arr5)
+
+
+        let res1 = Array.isArray();
+        let res2 = Array.isArray([1,2]);
+        let res3 = Array.isArray(new Array());
+        console.log(res1, res2, res3);
+        res1 = Array.isArray({});
+        res2 = Array.isArray(null);
+        res3 = Array.isArray("Array");
+
+        let fruits = ['banana', 'grape', 'peach', 'apple', 'strawberry'];
+        console.log(fruits instanceof Array)
+
+        let rsplice = fruits.splice(2,0,'orange');
+        console.log(fruits);
+        console.log(rsplice);
+        rsplice = fruits.splice(3,1);
+        console.log(fruits);
+        console.log(rsplice);
+
+        let rslice = fruits.slice(0,3);
+        console.log(fruits,rslice);
+
+        let arr6 = [1,2,3];
+        let arr7 = [4,5,6];
+        let res = arr6.concat(arr7);
+        console.log(res);
+        res = arr7.concat(arr6);
+        console.log(res);
+        res= arr6.concat(arr7,7);
+        console.log(res);
+        
+        console.log('reverse',res.reverse());
+        console.log('sort',res.sort());
+
+        let flatArray = [['a','b','c'],['d','e','f']];
+        console.log(flatArray);
+        console.log(flatArray.flat());
+        console.log(flatArray.flat(2));
+        console.log(flatArray);
+
+        console.log(res.fill(0),res);
+        console.log(res.fill('num', 1, 3));
+        console.log(res.fill('string',2));
+        console.log(res);   
+        
+        let text = res.join();
+        console.log(text);
+        text = res.join('|');
+        console.log(text);
+
+        let arrIter = ['first','second','third','fourth'];
+        for(let i = 0 ; i < arrIter.length;i++){
+            console.log('for',arrIter[i]);
+        }
+        for(let item in arrIter){
+            console.log('for in',arrIter[item]);
+        }
+        for(let item of arrIter){
+            console.log('for of',item);
+        }
+        arrIter.forEach(
+            function(item){
+                console.log('forEach',item);
+            }
+        );
+
+
+    </script>
+</body>
+</html>

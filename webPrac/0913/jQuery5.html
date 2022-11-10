@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery</title>
+    <script src="js\jquery-3.6.1.min.js"></script>
+
+    <style>
+      div.panel,
+      p.flip {
+        line-height: 30px;
+        color: white;
+        margin: auto;
+        padding: 10px;
+        text-align: center;
+        background: #555;
+        border: solid 5px #666;
+        color: #ffffff;
+        border-radius: 3px;
+        font-size: 17px;
+      }
+      div.panel {
+        display: none;
+        overflow: hidden;
+      }
+      p.flip {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="start">START</button>
+    <button id="stop1">STOP</button>
+    <button id="stop2">STOP ALL</button>
+    <button id="stop3">STOP FINISH</button>
+    <br />
+    <br />
+    <div
+      style="
+        background: lightgreen;
+        height: 100px;
+        width: 200px;
+        position: absolute;
+      "
+    >
+      OBJECT
+    </div>
+    <hr />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <button id="stop">STOP</button>
+    <p class="flip">해당 패널을 슬라이딩 업/다운하기위해 클릭하는 부분</p>
+    <div class="panel">
+      <p>해당 패널은 슬라이딩되어 내용이 보여집니다.</p>
+      <p>더불어 중간에 멈추는 동작도 추가되어 있습니다.</p>
+      <p>jQuery를 통해 구현되어 있습니다.</p>
+    </div>
+  </body>
+  <script>
+    $(function () {
+      $('#start').click(function () {
+        $('div').animate(
+          { left: '100px', height: '200px', fontSize: '3em' },
+          5000,
+        )
+      })
+      $('#stop1').click(function () {
+        $('div').stop()
+      })
+      $('#stop2').click(function () {
+        $('div').stop(true)
+      })
+      $('#stop3').click(function () {
+        $('div').stop(true, true)
+      })
+      $('.flip').click(function () {
+        $('.panel').slideToggle(3000)
+      })
+      $('#stop').click(function () {
+        $('.panel').stop()
+      })
+    })
+  </script>
+</html>

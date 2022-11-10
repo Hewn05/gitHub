@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM구조</title>
+    <style>
+        .color{color: brown}
+        .color2{color: blue}
+    </style>
+</head>
+<body>
+    <div>
+        <h1>도시</h1>
+        <ul>
+            <li id="one" class="color">서울</li>
+            <li id="two" class="color">대구</li>
+            <li id="three" class="color">부산</li>
+            <li id="four">대전</li>
+        </ul>
+    </div>
+    <script>
+        const ele = document.querySelector('#two');
+        ele.parentNode.className = 'color2';
+        const ele2 = document.querySelector('ul');
+        console.log(ele2);
+        console.log(ele2.firstChild,ele2.lastChild);
+        console.log(ele2.firstElementChild,ele2.lastElementChild);
+        ele2.firstElementChild.className = 'color2';
+        ele2.lastElementChild.className = 'color2';
+        console.log(ele2.firstElementChild.nextSibling, ele2.lastElementChild.previousSibling);
+        console.log(ele2.firstElementChild.nextElementSibling, ele2.lastElementChild.previousElementSibling);
+        ele2.firstElementChild.nextElementSibling.className='color2';
+        ele2.lastElementChild.previousElementSibling.className='color2';
+
+        const ele3 = document.getElementById('one');
+        console.dir(ele3);
+        console.log(ele3.nodeName, ele3.nodeType, ele3.nodeValue);
+        const textNode = ele3.firstChild;
+        console.dir(textNode);
+        console.log(textNode.nodeName, textNode.nodeType, textNode.nodeValue);
+        textNode.nodeValue = '인천';
+        console.dir(textNode);
+        console.log(textNode.nodeName, textNode.nodeType, textNode.nodeValue);
+        
+        console.log(ele.textContent);
+        console.log(ele3.textContent);
+        ele3.textContent = '서울';
+
+        ele3.innerHTML += '<strong class="color1">,한국</strong>';
+        
+        const newEle = document.createElement('li');
+        const newText = document.createTextNode('북경');
+
+        newEle.appendChild(newText);
+        document.querySelector('ul').appendChild(newEle);
+
+        const removeEle = document.getElementById('one');
+        document.querySelector('ul').insertBefore(newEle,removeEle);
+        newText.insertData(1,'중국');
+        // document.querySelector('ul').removeChild(removeEle);
+    </script>
+
+
+</body>
+</html>

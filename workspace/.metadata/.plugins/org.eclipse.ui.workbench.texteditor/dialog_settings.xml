@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<item key="selection" value="region"/>
+		<list key="findhistory">
+			<item value="MyFile"/>
+			<item value="region"/>
+			<item value="end"/>
+			<item value="myplace"/>
+			<item value="course_name"/>
+			<item value="hidden"/>
+			<item value="setContent"/>
+			<item value="pin"/>
+			<item value="showMar"/>
+			<item value="makeInfo"/>
+			<item value="class=&quot;info"/>
+			<item value="update"/>
+			<item value="MemberDTO"/>
+			<item value="LoginDTO"/>
+			<item value="MemDAO"/>
+		</list>
+		<list key="replacehistory">
+			<item value="course_id"/>
+			<item value="memberDTO"/>
+			<item value="memberDAO"/>
+			<item value="chosenPos"/>
+			<item value="myPlace"/>
+			<item value="myPlaces"/>
+			<item value="positions"/>
+			<item value=""/>
+			<item value="gameFile"/>
+			<item value="normalMethod"/>
+			<item value="pattern"/>
+			<item value="passengerName"/>
+			<item value="passengerCount"/>
+			<item value="StringBuilder"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1447"/>
+		<item key="DIALOG_Y_ORIGIN" value="277"/>
+		<item key="DIALOG_WIDTH" value="322"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="724"/>
+		<item key="DIALOG_Y_ORIGIN" value="396"/>
+	</section>
+</section>

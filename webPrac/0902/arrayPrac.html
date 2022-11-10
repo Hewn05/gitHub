@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Practice</title>
+</head>
+<body>
+    <h1>fruits array</h1>
+    <script>
+        let fruits=['apple','melon','kiwi','banana'];
+        fruits = fruits.concat(new Array('grape','orange','water melon'));
+     
+        fruits = fruits.sort();
+        document.write(fruits + "<br>");
+        document.write(fruits.join('/') + "<br>");
+
+        for(let item of fruits){
+            document.write(item + '/');
+        }
+    </script>
+</body>
+</html>

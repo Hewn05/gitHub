@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습</title>
+</head>
+<body>
+    <h1>숫자의 합 (1~원하는 숫자까지)</h1>
+    <script>
+        let fnum = 100//parseInt(window.prompt("숫자입력"));
+        document.write("원하는숫자 : " + fnum + "<br>")
+
+        let sum = 0;
+        let j = 0;
+        for(let i = 0; i <= fnum;i++) sum += i;        
+        document.write("총합 : " + sum + "<br>");
+
+        sum = 0; j = 0;
+        while(j <= fnum) sum += j++;
+        document.write("총합 : " + sum + "<br>");        
+
+        let oddsum = 0 ;
+        for(let i = 1; i <= fnum; i+=2) oddsum += i; 
+        document.write("홀수의 총합 : " + oddsum + "<br>");    
+
+        oddsum = 0; j = 1;
+        while(j <= fnum){
+            oddsum += j;
+            j += 2;
+        } document.write("홀수의 총합 : " + oddsum + "<br>");   
+
+        let evensum = 0 ;
+        for(let i = 0; i <= fnum; i+=2) evensum += i; 
+        document.write("짝수의 총합 : " + evensum + "<br>");
+
+        evensum = 0; j = 0;
+        while(j <= fnum){
+            evensum += j;
+            j += 2;
+        } document.write("짝수의 총합 : " + evensum + "<br>");   
+
+        let tsum = 0 ;
+        for(let i = 0; i <= fnum; i++)
+            if((i % 2) == 0 || (i % 3) == 0) tsum += i;
+        document.write("2의배수와 3의배수의 총합 : " + tsum + "<br>");
+
+        tsum = 0; j = 0;
+        while(j <= fnum){
+            if((j % 2) == 0 || (j % 3) == 0) tsum += j;
+            j++;
+        } document.write("2의배수와 3의배수의 총합 : " + tsum + "<br>");
+
+        let limit = 0;
+        let lsum = 0;
+        for(let i = 0;i <= fnum;i++){
+            lsum += i;
+            if(lsum >= 125){
+                limit = i ;
+                break;
+            }
+        } document.write("마지막 숫자: "+ limit + "<br>");
+        document.write("합계 : " + lsum + "<br>");
+
+        limit = 0 ; lsum = 0; j = 0;
+        while(j <= fnum){
+            lsum += j;
+            if(lsum >= 125){
+                limit = j;
+                break;
+            }
+            j++;
+        } document.write("마지막 숫자: "+ limit + "<br>");
+        document.write("합계 : " + lsum + "<br>");
+    </script>
+    
+</body>
+</html>

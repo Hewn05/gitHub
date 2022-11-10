@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function type</title>
+</head>
+<body>
+    <script>
+        (function(){
+            let a =1, b=3;
+            document.write(a*b);
+        }());
+
+        function parent(param){
+            let parentVal=param;
+            function children(){
+                let childVal = 'hong';
+                console.log(parentVal, childVal);
+                document.write(parentVal+childVal);
+            }
+            children();
+        }
+        parent('Hello.');
+
+        function factorial(n){
+            if(n<2) return 1;
+            return factorial(n-1)*n;
+        }
+        console.log(factorial(10));
+    </script>
+    // 콜백함수
+</body>
+</html>
