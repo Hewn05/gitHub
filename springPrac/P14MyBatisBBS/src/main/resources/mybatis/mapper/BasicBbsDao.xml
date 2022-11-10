@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.study.springboot.dao.IbasicBbsDao">
+
+	<select id="listDao" resultType="com.study.springboot.dto.BasicBbsDto">
+		SELECT * FROM BASIC_BBS ORDER BY ID DESC
+	</select>
+	
+	<!-- 인덱스 숫자로 받기 -->
+	<select id="viewDao" resultType="com.study.springboot.dto.BasicBbsDto">
+		SELECT * FROM BASIC_BBS WHERE ID=#{0}
+	</select>
+	
+	<!-- 파라미터 순서로 받기 -->
+	<insert id="writeDao">
+		INSERT INTO BASIC_BBS(ID, WRITER, TITLE, CONTENT)
+		 VALUES(BASIC_BBS_SEQ.NEXTVAL, #{param1}, #{param2}, #{param3})
+	</insert>
+	
+	<!-- 어노테이션으로 이름 지정해서 받기 -->
+	<delete id="deleteDao">
+		DELETE FROM BASIC_BBS WHERE ID=#{_id}
+	</delete>
+
+</mapper>	

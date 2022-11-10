@@ -27,7 +27,7 @@
 					<td>${dto.id}</td>
 					<td>${dto.writer}</td>
 					<td><a href="view?id=${dto.id}">${dto.title}</a></td>
-					<td><a href="delete?id=${dto.id}">  ☆  </a></td>
+					<td style="text-align:center"><a href="delete?id=${dto.id}">  ☆  </a></td>
 				</tr>
 			</c:forEach>
 		</c:otherwise>
