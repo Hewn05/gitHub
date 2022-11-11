@@ -42,6 +42,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\gitHub\springPrac\P14MyBatisBBS"/>
 			<item value="D:\springPrac\P09UseValidater"/>
 			<item value="D:\springPrac"/>
 		</list>
@@ -53,6 +54,9 @@
 		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
 		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
 		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\gitHub\springPrac\P17Service"/>
+			<item value="D:\gitHub\springPrac\P16Log"/>
+			<item value="D:\gitHub\springPrac\P15MyBatisResultBBS"/>
 			<item value="D:\springPrac\P11UseValidAnnotation"/>
 			<item value="D:\springPrac\P09UseValidater"/>
 			<item value="D:\springPrac\P10UseValidationUtils"/>
