@@ -1,5 +1,7 @@
 package com.study.springboot.auth;
 
+import javax.sql.DataSource;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -9,6 +11,8 @@ import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.provisioning.JdbcUserDetailsManager;
+import org.springframework.security.provisioning.UserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
@@ -56,25 +60,32 @@ public class WebSecurityConfig {
 	}
 	
 	
+	@Autowired 
+	public DataSource dataSource;
+	 
 	@Bean
-	public InMemoryUserDetailsManager userDetailService() {
-		UserDetails user = User.withUsername("user")
-								.password(passwordEncoder().encode("1234"))
-								.roles("USER")
-								.build();
-		UserDetails admin = User.withUsername("admin")	
-								.password(passwordEncoder().encode("1234"))
-								.roles("ADMIN")
-								.build();
-		
-		UserDetails[] userDetails = new UserDetails[2];
-		userDetails[0] = user;
-		userDetails[1] = admin;
-		
-		System.out.println(passwordEncoder().encode("1234"));
-		
-		return new InMemoryUserDetailsManager(userDetails);
+	public UserDetailsManager users(DataSource dataSource) {
+		JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
+		users.setUsersByUsernameQuery("SELECT NAME AS USERNAME, PASSWORD, ENABLED"
+									+ "	FROM USER_LIST WHERE NAME=?");
+		users.setAuthoritiesByUsernameQuery("SELECT NAME AS USERNAME, AUTHORITY"
+									+ " FROM USER_LIST WHERE NAME=?");		
+		return users;
 	}
+	
+	/*
+	 * @Bean public InMemoryUserDetailsManager userDetailService() { UserDetails
+	 * user = User.withUsername("user") .password(passwordEncoder().encode("1234"))
+	 * .roles("USER") .build(); UserDetails admin = User.withUsername("admin")
+	 * .password(passwordEncoder().encode("1234")) .roles("ADMIN") .build();
+	 * 
+	 * UserDetails[] userDetails = new UserDetails[2]; userDetails[0] = user;
+	 * userDetails[1] = admin;
+	 * 
+	 * System.out.println(passwordEncoder().encode("1234"));
+	 * 
+	 * return new InMemoryUserDetailsManager(userDetails); }
+	 */
 	
 	@Bean
 	public BCryptPasswordEncoder passwordEncoder() {

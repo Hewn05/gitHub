@@ -42,6 +42,11 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="D:\gitHub\springPrac\P22Transactional"/>
+			<item value="D:\gitHub\springPrac\P20NoTransaction"/>
+			<item value="D:\gitHub\springPrac\P21TransactionManager"/>
+			<item value="C:\Users\kosmo\Desktop\P20NoTransaction"/>
+			<item value="C:\Users\kosmo\Desktop\P20NoTransaction11"/>
 			<item value="D:\gitHub\springPrac\P14MyBatisBBS"/>
 			<item value="D:\springPrac\P09UseValidater"/>
 			<item value="D:\springPrac"/>
