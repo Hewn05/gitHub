@@ -1,0 +1,17 @@
+package com.shop.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+@RequestMapping(value = "/thymeleaf")
+public class ThymeleafController {
+
+	@GetMapping(value="/th01")
+	public String thymeleafEx01(Model model) {
+		model.addAttribute("data","허어쩜 살아가다 보면 한번은 널 찾을지 몰라하");
+		return "thymeleaf/thymeleaf01";
+	}
+}

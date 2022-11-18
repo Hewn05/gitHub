@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>타임레스</title>
+</head>
+<body>
+	<h2>상품 리스트 출력</h2>
+	<table border="1">
+		<thead>
+		<tr>
+			<td>순번</td>
+			<td>상품명</td>
+			<td>상품설명</td>
+			<td>가격</td>
+			<td>상품등록일</td>
+		</tr>
+		</thead>
+		<tbody>
+		<tr th:each="itemDto, status: ${itemDtoList}">
+			<td th:next="${status.index}"></td>
+			<td th:next="${itemDto.itemNm}"></td>
+			<td th:next="${itemDto.itemDetail}"></td>
+			<td th:next="${itemDto.price}"></td>
+			<td th:next="${itemDto.regDate}"></td>
+		</tr>
+		</tbody>
+	</table>
+</body>
+</html>

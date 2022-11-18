@@ -1,0 +1,5 @@
+package com.shop.springboot;
+
+public enum ItemSellStatus {
+
+}

@@ -1,0 +1,17 @@
+package com.study.springboot.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class LogWriteServiceImpl {
+	
+	@Autowired
+	Transaction3Dao transaction3;
+	
+	public int write(String consumerId, int amount) {
+		
+		return 0;
+	}
+	
+}
