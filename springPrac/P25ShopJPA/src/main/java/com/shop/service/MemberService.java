@@ -25,4 +25,5 @@ public class MemberService {
 			throw new IllegalStateException("이미 가입된 회원입니다.");
 		}
 	}
+	
 }

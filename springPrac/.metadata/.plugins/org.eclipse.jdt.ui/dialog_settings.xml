@@ -30,11 +30,11 @@
 	<section name="JavaSearchPage">
 		<item key="CASE_SENSITIVE" value="false"/>
 		<item key="INCLUDE_MASK" value="15"/>
-		<item key="HISTORY_SIZE" value="7"/>
+		<item key="HISTORY_SIZE" value="8"/>
 		<section name="HISTORY0">
 			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="loginUrl"/>
+			<item key="pattern" value="pageImpl"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -46,7 +46,7 @@
 		<section name="HISTORY1">
 			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="security"/>
+			<item key="pattern" value="loginUrl"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -56,9 +56,9 @@
 			</list>
 		</section>
 		<section name="HISTORY2">
-			<item key="searchFor" value="0"/>
+			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="platform"/>
+			<item key="pattern" value="security"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -70,7 +70,7 @@
 		<section name="HISTORY3">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="sec"/>
+			<item key="pattern" value="platform"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -82,7 +82,7 @@
 		<section name="HISTORY4">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
-			<item key="pattern" value="System.out.println(&quot;login&quot;)"/>
+			<item key="pattern" value="sec"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
 			<item key="javaElement" value=""/>
@@ -94,6 +94,18 @@
 		<section name="HISTORY5">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
+			<item key="pattern" value="System.out.println(&quot;login&quot;)"/>
+			<item key="limitTo" value="2"/>
+			<item key="matchLocations" value="0"/>
+			<item key="javaElement" value=""/>
+			<item key="isCaseSensitive" value="false"/>
+			<item key="includeMask" value="15"/>
+			<list key="workingSets">
+			</list>
+		</section>
+		<section name="HISTORY6">
+			<item key="searchFor" value="0"/>
+			<item key="scope" value="0"/>
 			<item key="pattern" value="prefix=&quot;c&quot;"/>
 			<item key="limitTo" value="2"/>
 			<item key="matchLocations" value="0"/>
@@ -103,7 +115,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY6">
+		<section name="HISTORY7">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="tagli"/>
@@ -161,5 +173,11 @@
 		<item key="DIALOG_WIDTH" value="373"/>
 		<item key="DIALOG_HEIGHT" value="549"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+	<section name="org.eclipse.jdt.internal.ui.typehierarchy.QuickHierarchy">
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_WIDTH" value="450"/>
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_HEIGHT" value="380"/>
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_SIZE" value="true"/>
+		<item key="org.eclipse.jdt.internal.ui.typehierarchy.HierarchyInformationControlDIALOG_USE_PERSISTED_LOCATION" value="false"/>
 	</section>
 </section>

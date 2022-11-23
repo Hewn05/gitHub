@@ -9,24 +9,21 @@ import org.springframework.data.repository.query.Param;
 
 import com.shop.entity.Item;
 
-public interface ItemRepository extends JpaRepository<Item, Long>,
-										QuerydslPredicateExecutor<Item>{
+public interface ItemRepository extends JpaRepository<Item, Long>, QuerydslPredicateExecutor<Item> {
 	//쿼리 메소드
-	//find + entity + 변수명
+	//find=(entity+이름)+By+변수명
 	List<Item> findByItemNm(String itemNm);
-	//and or  between
+	//And Or(=is equal) Between
 	List<Item> findByItemNmOrItemDetail(String itemNm, String itemDetail);
-	//LessThan LessThanEqual GreaterThan GreaterThanEqual
+	//LessThan LessThanEqual GreatThan GreaterThanEqual
 	List<Item> findByPriceLessThan(Integer price);
-	//OrderBy DESC
-	List<Item> findByPriceLessThanOrderByPriceDesc(Integer price);
 	
-	// JPQL java persistence query language
-	@Query("select i from Item i where i.itemDetail like %:itemDetail% order by i.price desc")
+	List<Item> findByPriceLessThanOrderByPriceDesc (Integer price);
+	//JPQL java persistence query language
+	 @Query("select i from Item i where i.itemDetail like %:itemDetail% order by i.price desc")
 	List<Item> findByItemDetail(@Param("itemDetail") String itemDetail);
-	
+
+	// MySQL 문으로 query 생성
 	@Query(value = "select * from item i where i.item_detail like %:itemDetail% order by i.price desc", nativeQuery = true)
-    List<Item> findByItemDetailByNative(@Param("itemDetail") String itemDetail);
-	
-	
+	List<Item> findByItemDetailByNative(@Param("itemDetail") String itemDetail);
 }

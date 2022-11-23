@@ -6,10 +6,11 @@ import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
+
+import javax.persistence.Id;
 
 import com.shop.constant.Role;
 import com.shop.dto.MemberFormDto;
@@ -31,12 +32,9 @@ public class Member {
 	private Long Id;
 	
 	private String name;
-	
 	@Column(unique = true)
 	private String email;
-	
 	private String password;
-
 	private String address;
 	
 	@Enumerated(EnumType.STRING)
@@ -47,9 +45,10 @@ public class Member {
 		member.setName(memberFormDto.getName());
 		member.setEmail(memberFormDto.getEmail());
 		member.setAddress(memberFormDto.getAddress());
-		String pw = passwordEncoder.encode(memberFormDto.getPassword());
+		String pw=passwordEncoder.encode(memberFormDto.getPassword());
 		member.setPassword(pw);
 		member.setRole(Role.ADMIN);
 		return member;
 	}
+	
 }
