@@ -42,6 +42,8 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\kosmo\Desktop\zip"/>
+			<item value="D:\gitHub\springPrac\P29ShopOrder"/>
 			<item value="D:\gitHub\springPrac\P27ShopSecurity"/>
 			<item value="D:\gitHub\springPrac\website"/>
 			<item value="D:\gitHub\springPrac\P30SpringBatch"/>
