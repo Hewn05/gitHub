@@ -32,32 +32,8 @@
 	<section name="JavaSearchPage">
 		<item key="CASE_SENSITIVE" value="false"/>
 		<item key="INCLUDE_MASK" value="15"/>
-		<item key="HISTORY_SIZE" value="10"/>
+		<item key="HISTORY_SIZE" value="8"/>
 		<section name="HISTORY0">
-			<item key="searchFor" value="4"/>
-			<item key="scope" value="0"/>
-			<item key="pattern" value="generated"/>
-			<item key="limitTo" value="2"/>
-			<item key="matchLocations" value="0"/>
-			<item key="javaElement" value=""/>
-			<item key="isCaseSensitive" value="false"/>
-			<item key="includeMask" value="15"/>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY1">
-			<item key="searchFor" value="4"/>
-			<item key="scope" value="0"/>
-			<item key="pattern" value="generateed"/>
-			<item key="limitTo" value="2"/>
-			<item key="matchLocations" value="0"/>
-			<item key="javaElement" value=""/>
-			<item key="isCaseSensitive" value="false"/>
-			<item key="includeMask" value="15"/>
-			<list key="workingSets">
-			</list>
-		</section>
-		<section name="HISTORY2">
 			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="pageImpl"/>
@@ -69,7 +45,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY3">
+		<section name="HISTORY1">
 			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="loginUrl"/>
@@ -81,7 +57,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY4">
+		<section name="HISTORY2">
 			<item key="searchFor" value="4"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="security"/>
@@ -93,7 +69,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY5">
+		<section name="HISTORY3">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="platform"/>
@@ -105,7 +81,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY6">
+		<section name="HISTORY4">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="sec"/>
@@ -117,7 +93,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY7">
+		<section name="HISTORY5">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="System.out.println(&quot;login&quot;)"/>
@@ -129,7 +105,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY8">
+		<section name="HISTORY6">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="prefix=&quot;c&quot;"/>
@@ -141,7 +117,7 @@
 			<list key="workingSets">
 			</list>
 		</section>
-		<section name="HISTORY9">
+		<section name="HISTORY7">
 			<item key="searchFor" value="0"/>
 			<item key="scope" value="0"/>
 			<item key="pattern" value="tagli"/>
